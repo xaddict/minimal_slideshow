@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slideshow</title>
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="css/xaddict-slideshow.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-okaidia.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/line-numbers/prism-line-numbers.min.css" />
+</head>
+<body>
+	<div class="container">
+		<a href="//xaddict.me" class="label">xaddict</a>
+		<h1 class="marker blue">Minimal slideshow script</h1>
+		<div class="columns">
+			<div class="column">
+				<div class="marker black">Normal Slideshow</div>
+				<div class="slideshow">
+					<div>Slide 1</div>
+					<div>Slide 2</div>
+					<div>Slide 3</div>
+					<div>Slide 4</div>
+					<div>Slide 5</div>
+				</div>
+				<div class="marker">Text beneath Slideshow</div>
+			</div>
+			<div class="column">
+				<div class="marker white">Customized slideshow</div>
+				<div class="slideshow" data-height="individual" data-delay="2000" data-timeout="7000">
+					<div>Slide 1</div>
+					<div>Slide 2</div>
+					<div>Slide 3</div>
+					<div>Slide 4</div>
+					<div>Slide 5</div>
+				</div>
+				<div class="marker">Text beneath Slideshow</div>
+			</div>
+		</div>
+		<div class="documentation">
+			<div>
+				<h2 class="marker yellow">Documentation</h2>
+			</div>
+			<h3 class="marker">The basics</h3>
+			<p>This script uses the following markup to trigger slideshow behavior:</p>
+			<pre class="line-numbers language-html"><code>
+				&lt;div class="slideshow"&gt;
+				&#09;&lt;div&gt;Slide 1&lt;/div&gt;
+				&#09;&lt;div&gt;Slide 2&lt;/div&gt;
+				&#09;&lt;div&gt;Slide 3&lt;/div&gt;
+				&#09;&lt;div&gt;Slide 4&lt;/div&gt;
+				&#09;&lt;div&gt;Slide 5&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+			<p>As you can see, a simple <code class="language-css">.slideshow</code> class with some <code class="language-css">div</code>s in it suffices (with the default css).</p>
+			<p>You can use a different container element or slides if you like. You'll just need to change some of the default css)</p>
+			<h3 class="marker">The options</h3>
+			<p>The slideshow only supports a handful of options via attributes on the <code>.slideshow</code> element:</p>
+			<dl>
+				<dt>data-height <span class="marker">[default: false]</span></dt>
+				<dd>if set to "individual" triggers per-slide height of the slideshow. Not recommended but forces the slideshow to resize every slide.</dd>
+				<dt>data-delay (in milliseconds) <span class="marker">[default: 0]</span></dt>
+				<dd>delays the start of the slideshow</dd>
+				<dt>data-timeout (in milliseconds) <span class="marker">[default: 5000]</span></dt>
+				<dd>The time a slide is visible. Keep in mind the transition from one slide to another eats into this</dd>
+			</dl>
+			<p>The right slideshow above uses the following code:</p>
+			<pre class="line-numbers language-html"><code>
+				&lt;div class="slideshow"
+				&#09;data-height="individual"
+				&#09;data-delay="2000"
+				&#09;data-timeout="7000"&gt;
+				&#09;&lt;div&gt;Slide 1&lt;/div&gt;
+				&#09;&lt;div&gt;Slide 2&lt;/div&gt;
+				&#09;&lt;div&gt;Slide 3&lt;/div&gt;
+				&#09;&lt;div&gt;Slide 4&lt;/div&gt;
+				&#09;&lt;div&gt;Slide 5&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+	<script src="js/xaddict-slideshow.js"></script>
+</body>
+</html>

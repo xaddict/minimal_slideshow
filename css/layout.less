@@ -1,0 +1,155 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	background: #eee;
+	font-family: Roboto, sans-serif;
+	padding: 0 0 2em 0;
+	text-align: center;
+}
+
+h1, h2, h3 {
+	font-weight: 100;
+	margin: 0;
+}
+
+p {
+	line-height: 1.4;
+}
+
+pre {
+	background: hsla(0,0,100%,0.5);
+	display: block;
+	height: auto;
+	margin: 0 0 2em 0;
+	padding: 1em;
+	text-align: left;
+}
+code {
+	background: hsla(0,0,100%,0.5);
+	padding: 0;
+}
+pre code {
+	background: transparent;
+}
+
+.label {
+	background: blue;
+	background: linear-gradient(180deg,#0AF,#00D57B);
+	color: white;
+	display: inline-block;
+	padding: .5em 4em;
+	position: fixed;
+	right: 0;
+	text-decoration: none;
+	top: 0;
+	transform: translate(50%, -50%) rotate(45deg) translateY(200%);
+	transform-origin: center;
+	transition: all .4s ease;
+	&:hover {
+		transform: translate(50%, -50%) rotate(45deg) translateY(200%) scale(1.1);
+	}
+}
+
+dl {
+	dt {
+		font-weight: bold;
+		margin-bottom: .2em;
+	}
+	dd {
+		margin-bottom: .6em;
+	}
+}
+
+.documentation {
+	text-align: left;
+}
+
+//styling
+.container {
+	margin: 2em auto 0 auto;
+	width: 40em;
+}
+
+.columns {
+	display: flex;
+	justify-content: space-between;
+	margin: 1em auto;
+	width: 100%;
+	.column {
+		flex: 0 0 45%;
+	}
+}
+
+.marker {
+	clear: both;
+	color: black;
+	display: inline-block;
+	margin: 0 auto .1em auto;
+	padding: .2em;
+	position: relative;
+	&:before {
+		background: hsla(200, 100%, 100%, 0.8);
+		content: '';
+		display: inline-block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+	&:after {
+		content: "\A";
+		white-space: pre;
+	}
+	&.black {
+		color: white;
+		&:before {
+			background: hsla(0, 100%, 0%, 0.8);
+		}
+	}
+	&.blue {
+		color: white;
+		&:before {
+			background: hsla(200, 100%, 50%, 0.8);
+		}
+	}
+	&.yellow {
+		color: black;
+		&:before {
+			background: hsla(60, 100%, 50%, 0.8);
+		}
+	}
+}
+
+.slideshow {
+	margin: 1em 0;
+	> div {
+		align-items: center;
+		color: white;
+		display: flex;
+		font-size: 2em;
+		font-weight: 100;
+		justify-content: center;
+		vertical-align: middle;
+	}
+	> div:nth-child(1) {
+		background: hsl(100, 30%, 50%);
+		min-height: 10rem;
+	}
+	> div:nth-child(2) {
+		background: hsl(150, 30%, 50%);
+		min-height: 20rem;
+	}
+	> div:nth-child(3) {
+		background: hsl(200, 30%, 50%);
+		min-height: 15rem;
+	}
+	> div:nth-child(4) {
+		background: hsl(250, 30%, 50%);
+		min-height: 17.5rem;
+	}
+	> div:nth-child(5) {
+		background: hsl(300, 30%, 50%);
+		min-height: 16.5rem;
+	}
+}

@@ -1,0 +1,2 @@
+.slideshow{background:#fff;overflow:hidden;position:relative;-webkit-transition:all 1s ease;transition:all 1s ease}.slideshow:hover{outline:1px dashed}.slideshow>div{opacity:0;position:absolute;top:0;-webkit-transition:all 1s ease;transition:all 1s ease;width:100%;z-index:0}.slideshow>div:first-child{opacity:1;position:static;z-index:0}.slideshow>div.active{opacity:1;z-index:1}
+/*# sourceMappingURL=xaddict-slideshow.css.map */
